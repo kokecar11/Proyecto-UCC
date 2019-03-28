@@ -2,7 +2,7 @@
     <div class="page-header">
         <h1 class="text-titles"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> MI CUENTA</small></h1>
     </div>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+    <p class="lead">Actualizar mi Cuenta.</p>
 </div>
 
 <!-- Panel mi cuenta -->
@@ -53,7 +53,7 @@
                 <fieldset>
                     <legend><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</legend>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo minima cupiditate tempore nobis. Dolor, blanditiis, mollitia. Alias fuga fugiat molestias debitis odit, voluptatibus explicabo quia sequi doloremque numquam dignissimos quis.
+                        Modificar Contraseña de Usuario.
                     </p>
                     <div class="container-fluid">
                         <div class="row">

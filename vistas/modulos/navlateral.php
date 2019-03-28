@@ -36,7 +36,7 @@
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
 				</li>
-				<li>
+				<!--<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
 						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Administración <i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
@@ -54,25 +54,28 @@
 							<a href="<?php echo SERVERURLL?>proyecto/"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo libro</a>
 						</li>
 					</ul>
-				</li>
+				</li>-->
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
 						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Usuarios <i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="<?php echo SERVERURLL?>admin/"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+							<a href="<?php echo SERVERURLL?>admin/"><i class="zmdi zmdi-account zmdi-hc-fw"></i>Coordinadores</a>
 						</li>
 						<li>
-							<a href="<?php echo SERVERURLL?>client/"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
+							<a href="<?php echo SERVERURLL?>teacher/"><i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>Profesores</a>
+						</li>
+						<li>
+							<a href="<?php echo SERVERURLL?>student/"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>Estudiantes</a>
 						</li>
 					</ul>
 				</li>
-				<li>
+				<!--<li>
 					<a href="<?php echo SERVERURLL?>catalog/">
 						<i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catalogo
 					</a>
-				</li>
+				</li>-->
 			</ul>
 		</div>
 	</section>

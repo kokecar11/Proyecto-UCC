@@ -1,9 +1,9 @@
 <?php
 
-    const SERVER="";
-    const DB="";
-    const USER="";
-    const PASSWORD="";
+    const SERVER="localhost";
+    const DB="proyectoucc";
+    const USER="root";
+    const PASSWORD="root";
 
     const GEST_DB="mysql:host=".SERVER.";dbname=".DB;
 
