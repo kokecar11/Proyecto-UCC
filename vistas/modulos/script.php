@@ -7,4 +7,4 @@
 	<script src="<?php echo SERVERURLL?>vistas/js/main.js"></script>
 	<script>
 		$.material.init();
-	</script>
+</script>
