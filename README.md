@@ -1,2 +1,2 @@
-# proyectoucc
+# Proyecto-UCC
 Proyecto UCC
