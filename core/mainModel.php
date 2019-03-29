@@ -25,6 +25,27 @@
 
         }
 
+        protected function add_account($datos){
+
+            $sql = self::connection()->prepare("INSERT INTO cuenta(Acc_email,Acc_priv,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
+                        VALUES(:email,:privilegio,:pass,:estado,:types,:photo)");
+            $sql-> bindParam(":email",$datos['email']);
+            $sql-> bindParam(":privilegio",$datos['privilegio']);
+            $sql-> bindParam(":pass",$datos['pass']);
+            $sql-> bindParam(":estado",$datos['estado']);
+            $sql-> bindParam(":types",$datos['types']);
+            $sql-> bindParam(":photo",$datos['photo']);
+            $sql->execute();
+            return $sql;
+        }
+
+        protected function delete_account($emaild){
+            $sql =self::connection()->prepare("DELETE FROM cuenta WHERE Acc_email=:email");
+            $sql-> bindParam(":email",$emaild);
+            $sql->execute();
+            return $sql;
+
+        }
 
         public function encryption($string){
 			$output=FALSE;
@@ -68,7 +89,7 @@
                         Swal.fire(
                             '".$datos['Titulo']."',
                             '".$datos['Texto']."',
-                            '".$datos['Tipo']"'
+                            '".$datos['Tipo']."'
                         );
                     </script>
                 ";
@@ -78,7 +99,7 @@
                 Swal.fire({
                     title: '".$datos['Titulo']."',
                     text: '".$datos['Texto']."',
-                    type: '".$datos['Tipo']"',
+                    type: '".$datos['Tipo']."',
                     confirmButtonText: 'Aceptar'
                   }).then((result) => {
                     location.reload();
@@ -91,7 +112,7 @@
                 Swal.fire({
                     title: '".$datos['Titulo']."',
                     text: '".$datos['Texto']."',
-                    type: '".$datos['Tipo']"',
+                    type: '".$datos['Tipo']."',
                     confirmButtonText: 'Aceptar'
                   }).then((result) => {
                     $('.FormularioAjax')[0].reset();
@@ -102,4 +123,4 @@
             return $alert_ms;   
         }
     
-    }
+}

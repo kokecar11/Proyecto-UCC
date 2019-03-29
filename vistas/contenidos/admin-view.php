@@ -33,19 +33,24 @@
         </div>
         <div class="panel-body">
             <form action = "<?php echo SERVERURLL;?>ajax/adminAjax.php" method = "POST" data-form = "save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
-                <fieldset>
-                   <!-- <legend><i class="zmdi zmdi-account-box"></i> &nbsp; Información personal</legend>
+            <fieldset>
+                    <legend><i class="zmdi zmdi-account-box"></i> &nbsp; Información personal</legend>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
-                                    <label class="control-label"> *</label>
-                                    <input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-reg" required="" maxlength="30">
+                                    <label class="control-label">Nombres *</label>
+                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="names-reg" required="" maxlength="30">
                                 </div>
                             </div>
-                           
+                            <div class="col-xs-12 col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Apellidos *</label>
+                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="lastnames-reg" required="" maxlength="30">
+                                </div>
+                            </div>
                         </div>
-                    </div>-->
+                    </div>
                 </fieldset>
                 <br>
                 
@@ -55,20 +60,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">E-mail</label>
-                                    <input class="form-control" type="email" name="email-reg" maxlength="50">
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Nombres*</label>
-                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}" class="form-control" type="text" name="usuario-reg" required="" maxlength="15">
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Apellidos*</label>
-                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}" class="form-control" type="text" name="usuario-reg" required="" maxlength="15">
+                                    <label class="control-label">E-mail Institucional*</label>
+                                    <input class="form-control" type="email" name="email-reg" required="" maxlength="50">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
@@ -106,19 +99,19 @@
                                 <div class="radio radio-primary">
                                     <label>
                                         <input type="radio" name="optionsPrivilegio" id="optionsRadios1" value="1">
-                                        <i class="zmdi zmdi-star"></i> &nbsp; Nivel 1
+                                        <i class=""></i> &nbsp; Nivel 1
                                     </label>
                                 </div>
                                 <div class="radio radio-primary">
                                     <label>
                                         <input type="radio" name="optionsPrivilegio" id="optionsRadios2" value="2">
-                                        <i class="zmdi zmdi-star"></i> &nbsp; Nivel 2
+                                        <i class=""></i> &nbsp; Nivel 2
                                     </label>
                                 </div>
                                 <div class="radio radio-primary">
                                     <label>
                                         <input type="radio" name="optionsPrivilegio" id="optionsRadios3" value="3" checked="">
-                                        <i class="zmdi zmdi-star"></i> &nbsp; Nivel 3
+                                        <i class=""></i> &nbsp; Nivel 3
                                     </label>
                                 </div>
                             </div>

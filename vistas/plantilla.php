@@ -9,7 +9,7 @@
 <body>
 
 	<?php 
-		$petiAjax=false;
+		$petiAjax=true;
 		require_once "./controladores/viewsController.php";
 
 		$vw = new viewsController();
