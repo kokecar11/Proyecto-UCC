@@ -8,17 +8,17 @@
 <div class="container-fluid">
     <ul class="breadcrumb breadcrumb-tabs">
         <li>
-            <a href="<?php echo SERVERURLL?>admin/" class="btn btn-info">
+            <a href="<?php echo SERVERURLL;?>admin/" class="btn btn-info">
                 <i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ADMINISTRADOR
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL?>adminlist" class="btn btn-success">
+            <a href="<?php echo SERVERURLL;?>adminlist" class="btn btn-success">
                 <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL?>adminsearch" class="btn btn-primary">
+            <a href="<?php echo SERVERURLL;?>adminsearch" class="btn btn-primary">
                 <i class="zmdi zmdi-search"></i> &nbsp; BUSCAR ADMINISTRADOR
             </a>
         </li>

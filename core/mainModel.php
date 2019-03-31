@@ -86,7 +86,7 @@
             if($datos['Alerta']=="simple"){
                 $alert_ms="
                     <script>
-                        Swal.fire(
+                        swal(
                             '".$datos['Titulo']."',
                             '".$datos['Texto']."',
                             '".$datos['Tipo']."'
@@ -96,31 +96,32 @@
             }elseif($datos['Alerta']=="reload"){
                 $alert_ms="
                 <script>
-                Swal.fire({
-                    title: '".$datos['Titulo']."',
-                    text: '".$datos['Texto']."',
-                    type: '".$datos['Tipo']."',
-                    confirmButtonText: 'Aceptar'
-                  }).then((result) => {
-                    location.reload();
-                  })
+                    swal({
+                        title: '".$datos['Titulo']."',
+                        text: '".$datos['Texto']."',
+                        type: '".$datos['Tipo']."',
+                        confirmButtonText: 'Aceptar'
+                        }).then(function () {
+                        location.reload();
+                    });
                 </script>
             ";
             }elseif($datos['Alerta']=="clean"){
                 $alert_ms="
                 <script>
-                Swal.fire({
-                    title: '".$datos['Titulo']."',
-                    text: '".$datos['Texto']."',
-                    type: '".$datos['Tipo']."',
-                    confirmButtonText: 'Aceptar'
-                  }).then((result) => {
-                    $('.FormularioAjax')[0].reset();
-                  })
+                    swal({
+                        title: '".$datos['Titulo']."',
+                        text: '".$datos['Texto']."',
+                        type: '".$datos['Tipo']."',
+                        confirmButtonText: 'Aceptar'
+                        }).then(function () {
+                        $('.FormularioAjax')[0].reset();
+                    });
                 </script>
                 ";
             }
             return $alert_ms;   
         }
+        
     
-}
+    }

@@ -14,16 +14,16 @@ $(document).ready(function(){
 	$('.btn-exit-system').on('click', function(e){
 		e.preventDefault();
 		swal({
-		  	title: 'Are you sure?',
-		  	text: "The current session will be closed",
+		  	title: 'Esta usted seguro de Salir?',
+		  	text: "La sesion será cerrada",
 		  	type: 'warning',
 		  	showCancelButton: true,
 		  	confirmButtonColor: '#03A9F4',
 		  	cancelButtonColor: '#F44336',
-		  	confirmButtonText: '<i class="zmdi zmdi-run"></i> Yes, Exit!',
-		  	cancelButtonText: '<i class="zmdi zmdi-close-circle"></i> No, Cancel!'
+		  	confirmButtonText: '<i class="zmdi zmdi-run"></i> Si, Salir!',
+		  	cancelButtonText: '<i class="zmdi zmdi-close-circle"></i> No, Cancelar!'
 		}).then(function () {
-			window.location.href="index.html";
+			window.location.href="http://localhost/Proyecto-UCC/";
 		});
 	});
 	$('.btn-menu-dashboard').on('click', function(e){
