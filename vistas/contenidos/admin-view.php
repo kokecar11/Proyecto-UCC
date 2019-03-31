@@ -58,7 +58,7 @@
                     <legend><i class="zmdi zmdi-key"></i> &nbsp; Datos de la cuenta</legend>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre de Usuario institucional*</label>
                                     <input class="form-control" type="text" name="email-reg" required="" maxlength="50">

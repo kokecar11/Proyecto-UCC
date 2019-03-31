@@ -35,16 +35,16 @@
 					<a href="<?php echo SERVERURLL?>home/">
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
-				</li>
+				</li>-->
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
 						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Administración <i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="<?php echo SERVERURLL?>company/"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
+							<a href="<?php echo SERVERURLL?>group/"><i class="zmdi zmdi-group zmdi-hc-fw"></i> Grupos</a>
 						</li>
-						<li>
+						<!--<li>
 							<a href="<?php echo SERVERURLL?>category/"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
 						</li>
 						<li>
@@ -52,9 +52,9 @@
 						</li>
 						<li>
 							<a href="<?php echo SERVERURLL?>proyecto/"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo libro</a>
-						</li>
+						</li>-->
 					</ul>
-				</li>-->
+				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
 						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Usuarios <i class="zmdi zmdi-caret-down pull-right"></i>

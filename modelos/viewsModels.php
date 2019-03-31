@@ -4,7 +4,7 @@
         // En esta funcion va devolver si la palabra esta en la lista blanca
         protected function obt_views_models($viewss){
             $listWhite = ["admin","adminlist","adminsearch","catalog","category","categorylist",
-            "teacher","teacherlist","teachersearch","companylist","company","home","login","myacc","mydata",
+            "teacher","teacherlist","teachersearch","grouplist","group","home","login","myacc","mydata",
             "provider","providerlist","proyecto",
             "proyectoconfig","proyectoinfo","search","student"];
 
