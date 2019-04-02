@@ -14,7 +14,7 @@
                 $route = explode("/", $_GET['views']);
                 $answer = viewsModels::obt_views_models($route[0]);
             }else{
-                $answer = 'login';
+                $answer="login";
             }
             return $answer;
         }

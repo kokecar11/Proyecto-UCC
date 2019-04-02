@@ -5,12 +5,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="<?php echo SERVERURLL?>vistas/css/main.css">
+	<!--====== Scripts -->
+	<?php include "./vistas/modulos/script.php"; ?>
 </head>
 <body>
 
 	<?php 
 		$petiAjax=true;
 		require_once "./controladores/viewsController.php";
+		
 
 		$vw = new viewsController();
 		$viewR = $vw-> obt_views_controller();
@@ -22,7 +25,7 @@
 			}
 			
 		else:	
-			session_start();
+			session_start(['name'=>'PUCC']);
 	?>
 	<!-- SideBar -->
 		<?php include "./vistas/modulos/navlateral.php"; ?>     
@@ -36,7 +39,5 @@
 	</section>
 	<?php endif; ?>
 	
-	<!--====== Scripts -->
-	<?php include "./vistas/modulos/script.php"; ?>
 </body>
 </html>

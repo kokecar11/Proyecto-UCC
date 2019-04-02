@@ -4,5 +4,4 @@
         <h2 class="text-center">ERROR-404</h2>
         <p class="lead text-center">Pagina no Encontrada, Lo siento</p>
     </div>
-
 </div>

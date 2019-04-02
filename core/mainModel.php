@@ -27,8 +27,9 @@
 
         protected function add_account($datos){
 
-            $sql = self::connection()->prepare("INSERT INTO cuenta(Acc_email,Acc_priv,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
-                        VALUES(:email,:privilegio,:pass,:estado,:types,:photo)");
+            $sql = self::connection()->prepare("INSERT INTO cuenta(Acc_account,Acc_email,Acc_privi,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
+                        VALUES(:acuenta,:email,:privilegio,:pass,:estado,:types,:photo)");
+            $sql-> bindParam(":acuenta",$datos['acuenta']);            
             $sql-> bindParam(":email",$datos['email']);
             $sql-> bindParam(":privilegio",$datos['privilegio']);
             $sql-> bindParam(":pass",$datos['pass']);
@@ -39,9 +40,9 @@
             return $sql;
         }
 
-        protected function delete_account($emaild){
-            $sql =self::connection()->prepare("DELETE FROM cuenta WHERE Acc_email=:email");
-            $sql-> bindParam(":email",$emaild);
+        protected function delete_account($account){
+            $sql =self::connection()->prepare("DELETE FROM cuenta WHERE Acc_account=:cuenta");
+            $sql-> bindParam(":cuenta",$account);
             $sql->execute();
             return $sql;
 

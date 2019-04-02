@@ -12,7 +12,6 @@
                     $names=mainModel::clean_cadn($_POST['names-reg']);
                     $lastnames=mainModel::clean_cadn($_POST['lastnames-reg']);
                     $email=mainModel::clean_cadn($_POST['email-reg']);
-                    $emailins=$_POST['emailins-reg'];
                     $pass1=mainModel::clean_cadn($_POST['password1-reg']);
                     $pass2=mainModel::clean_cadn($_POST['password2-reg']);
                     $privileg=mainModel::clean_cadn($_POST['optionsPrivilegio']);
@@ -41,6 +40,7 @@
                         }else{
                             $clave=mainModel::encryption($pass1);
                             $data_acc=[
+                                "acuenta"=>"$email",
                                 "email"=>"$email@ucatolica.edu.co",
                                 "privilegio"=>"$privileg",
                                 "pass"=>"$clave",
@@ -51,7 +51,7 @@
                             $save_acc=mainModel::add_account($data_acc);
                             if($save_acc->rowCount()>=1){
                                 $data_adm=[
-                                    "acc_email"=>"$email@ucatolica.edu.co",
+                                    "acc_email"=>"$email",
                                     "names"=>"$names",
                                     "lastnames"=>"$lastnames"
                                 ];
