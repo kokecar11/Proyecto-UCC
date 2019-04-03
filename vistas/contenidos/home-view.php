@@ -1,47 +1,47 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles">System <small>Tiles</small></h1>
+        <h1 class="text-titles">Dashboard <small>Usuarios</small></h1>
     </div>
 </div>
 <div class="full-box text-center" style="padding: 30px 10px;">
     <article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
-            Admin
+            Coordinador
         </div>
         <div class="full-box tile-icon text-center">
             <i class="zmdi zmdi-account"></i>
         </div>
         <div class="full-box tile-number text-titles">
-            <p class="full-box">7</p>
-            <small>Register</small>
+            <p class="full-box">0</p>
+            <small>Registrados</small>
         </div>
     </article>
     <article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
-            Teacher
+            Profesor
         </div>
         <div class="full-box tile-icon text-center">
             <i class="zmdi zmdi-male-alt"></i>
         </div>
         <div class="full-box tile-number text-titles">
-            <p class="full-box">10</p>
-            <small>Register</small>
+            <p class="full-box">0</p>
+            <small>Registrados</small>
         </div>
     </article>
     <article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
-            Student
+            Estudiante
         </div>
         <div class="full-box tile-icon text-center">
             <i class="zmdi zmdi-face"></i>
         </div>
         <div class="full-box tile-number text-titles">
-            <p class="full-box">70</p>
-            <small>Register</small>
+            <p class="full-box">00</p>
+            <small>Registrados</small>
         </div>
     </article>
 </div>
-<div class="container-fluid">
+<!--<div class="container-fluid">
     <div class="page-header">
         <h1 class="text-titles">System <small>TimeLine</small></h1>
     </div>
@@ -101,4 +101,4 @@
     </section>
 
 
-</div>
+</div>-->

@@ -25,7 +25,7 @@
     </ul>
 </div>
 
-<!-- Panel nuevo Profesor -->
+<!-- Panel nuevo Estudiante -->
 <div class="container-fluid">
     <div class="panel panel-info">
         <div class="panel-heading">

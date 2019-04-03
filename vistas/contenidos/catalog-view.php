@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-book-image zmdi-hc-fw"></i> CATALOGO</h1>
+        <h1 class="text-titles"><i class="zmdi zmdi-book-image zmdi-hc-fw"></i>Documentos</h1>
     </div>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+    <p class="lead">Subir Documentos</p>
 </div>
-<div class="container-fluid text-center">
+<!--<div class="container-fluid text-center">
     <div class="btn-group">
         <a href="javascript:void(0)" class="btn btn-default btn-raised">SELECCIONE UNA CATEORÍA</a>
         <a href="javascript:void(0)" data-target="dropdown-menu" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
@@ -18,9 +18,9 @@
         <li><a href="#!">Categoría 7</a></li>
         </ul>
     </div>
-</div>
+</div>-->
 <div class="container-fluid">
-    <h2 class="text-titles text-center">Categoría seleccionada</h2>
+    <!--<h2 class="text-titles text-center">Categoría seleccionada</h2>-->
     <div class="row">
         <div class="col-xs-12">
             <div class="list-group">
@@ -29,9 +29,9 @@
                         <img class="circle" src="<?php echo SERVERURLL?>vistas/assets/book/book-default.png" alt="icon">
                     </div>
                     <div class="row-content">
-                        <h4 class="list-group-item-heading">1 - Título completo del libro</h4>
+                        <h4 class="list-group-item-heading">1 - Título completo del Proyecto</h4>
                         <p class="list-group-item-text">
-                            <strong>Autor: </strong>Nombre Autor del libro <br>
+                            <strong>Autor: </strong>Nombre del Grupo <br>
                             <a href="<?php echo SERVERURLL?>proyectoinfo/" class="btn btn-primary" title="Más información"><i class="zmdi zmdi-info"></i></a>
                             <a href="#!" class="btn btn-primary" title="Ver PDF"><i class="zmdi zmdi-file"></i></a>
                             <a href="#!" class="btn btn-primary" title="Descargar PDF"><i class="zmdi zmdi-cloud-download"></i></a>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="list-group-separator"></div>
-                <div class="list-group-item">
+                <!--<div class="list-group-item">
                     <div class="row-picture">
                         <img src="<?php echo SERVERURLL?>vistas/assets/book/book-cover.jpg" alt="icon">
                     </div>
@@ -54,7 +54,7 @@
                             <a href="<?php echo SERVERURLL?>proyectoconfig/" class="btn btn-primary" title="Gestionar libro"><i class="zmdi zmdi-wrench"></i></a>
                         </p>
                     </div>
-                </div>
+                </div>-->
                 <div class="list-group-separator"></div>
             </div>
             <nav class="text-center">

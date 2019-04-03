@@ -58,7 +58,8 @@
                     <legend><i class="zmdi zmdi-key"></i> &nbsp; Datos de la cuenta</legend>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12">
+                            <div class="col-xs-6">
+                            
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre de Usuario institucional*</label>
                                     <input class="form-control" type="text" name="email-reg" required="" maxlength="50">
@@ -82,7 +83,7 @@
                     </div>
                 </fieldset>
                 <br>
-                <fieldset>
+                <!--<fieldset>
                     <legend><i class="zmdi zmdi-star"></i> &nbsp; Nivel de privilegios</legend>
                     <div class="container-fluid">
                         <div class="row">
@@ -119,7 +120,7 @@
                             </div>
                         </div>
                     </div>
-                </fieldset>
+                </fieldset>-->
                 <p class="text-center" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
                 </p>

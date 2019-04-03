@@ -7,7 +7,7 @@
 
 <!-- Panel mis datos -->
 <div class="container-fluid">
-    <div class="panel panel-success">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MIS DATOS</h3>
         </div>
@@ -17,12 +17,6 @@
                     <legend><i class="zmdi zmdi-account-box"></i> &nbsp; Información personal</legend>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">DNI/CEDULA *</label>
-                                    <input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-up" required="" maxlength="30">
-                                </div>
-                            </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombres *</label>
@@ -33,18 +27,6 @@
                                 <div class="form-group label-floating">
                                     <label class="control-label">Apellidos *</label>
                                     <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="apellido-up" required="" maxlength="30">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Teléfono</label>
-                                    <input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-up" maxlength="15">
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Dirección</label>
-                                    <textarea name="direccion-up" class="form-control" rows="2" maxlength="100"></textarea>
                                 </div>
                             </div>
                         </div>

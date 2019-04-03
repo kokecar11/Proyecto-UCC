@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administración <small>EMPRESA</small></h1>
+        <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administración <small>GRUPOS</small></h1>
     </div>
     <p class="lead">Creacion de Grupos de Proyecto y Ante-Proyecto!</p>
 </div>
@@ -46,34 +46,39 @@
                     <legend><i class="zmdi zmdi-assignment-o"></i> &nbsp; Integrantes</legend>
                     <div class="container-fluid">
                         <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Usuario de Integrante - 1*</label>
+                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,50}" class="form-control" type="text" name="Estudiante1-reg" required="" maxlength="50">
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Usuario de Integrante - 2</label>
+                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,50}" class="form-control" type="text" name="Estudiante2-reg" required="" maxlength="50">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row">
                             <div class="col-xs-12">
+                            <div class="container-fluid text-left">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Usuario de Integrante *</label>
-                                    <input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,50}" class="form-control" type="text" name="director-reg" required="" maxlength="50">
-                                </div>
-                            </div>
-                         
-                            <div class="form-group label-floating">
-                                <div class="col-xs-12 col-sm-6">
-                                    <label class="control-label">Tipo de Proceso*</label>
-                                    <select class="form-control" id="Tipo_pross" name="Tipo_pross">
-                                        <option class="control-label" value="Ante-Proyecto">Ante-Proyecto</option>
-                                        <option class="control-label" value="Proyecto">Proyecto</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Año *</label>
-                                    <input pattern="[0-9]{4,4}" class="form-control" type="text" name="year-reg" required="" maxlength="4">
-                                </div>
+                                <label class="control-label">Tipo de Proceso</label>
+                                    <div class="btn-group">
+                                        <select class="form-control" id="Tipo_pross" name="Tipo_pross">
+                                            <option value="Ante-Proyecto">Ante-Proyecto</option>
+                                            <option value="Proyecto">Proyecto</option>
+                                        </select>
+                                    </div>
+                             </div>
                             </div>
                         </div>
                     </div>
                 </fieldset>
                 <br>
                 <p class="text-center" style="margin-top: 20px;">
-                    <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+                    <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Crear Grupo</button>
                 </p>
             </form>
         </div>

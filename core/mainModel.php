@@ -25,6 +25,40 @@
 
         }
 
+        protected function request_email_pass($camp,$campwhe,$valor){
+
+            $sql1 = self::connection()->prepare("SELECT $camp FROM cuenta WHERE $campwhe= ? LIMIT 1 ");
+            $sql1->bindParam('s',$valor);
+            $sql1->execute();
+            return $sql;
+        }
+
+        protected function send_email($email, $nombre, $asunto, $cuerpo){
+            require_once '../PHPMailer/PHPMailerAutoload.php';
+            $mail = new PHPMailer();
+            $mail->isSMTP();
+            $mail->SMTPAuth = true;
+            $mail->SMTPSecure = 'tls'; //Modificar
+            $mail->Host = 'smtp.gmail.com'; //Modificar
+            $mail->Port = '587'; //Modificar
+            
+            $mail->Username = 'muddapp11@gmail.com'; //Modificar
+            $mail->Password = 'c4rp1nt3r0'; //Modificar
+            
+            $mail->setFrom('correo emisor', 'nombre de correo emisor'); //Modificar
+            $mail->addAddress($email, $nombre);
+            
+            $mail->Subject = $asunto;
+            $mail->Body    = $cuerpo;
+            $mail->IsHTML(true);
+            
+            if($mail->send()){
+                return true;
+            }else{
+                return false;
+            }            
+        }
+
         protected function add_account($datos){
 
             $sql = self::connection()->prepare("INSERT INTO cuenta(Acc_account,Acc_email,Acc_privi,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
@@ -63,9 +97,14 @@
 			return $output;
         }
         
-       /* protected function gen_cod_random($){
+        protected function gen_cod_random($letras,$long,$num){
+            for($i=1;i<=$long;$i++){
+                $numero=rand(0,9);
+                $letras.=$numero;
+            }
+            return $letras."-".$num;
 
-        }*/
+        }
         protected function clean_cadn($cadena){
             $cadena= trim($cadena); //Quita los espacios en el texto
             $cadena= stripslashes($cadena); //Quita barras invertidas

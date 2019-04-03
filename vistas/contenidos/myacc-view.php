@@ -7,13 +7,13 @@
 
 <!-- Panel mi cuenta -->
 <div class="container-fluid">
-    <div class="panel panel-success">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MI CUENTA</h3>
         </div>
         <div class="panel-body">
             <form>
-                <fieldset>
+               <!-- <fieldset>
                     <legend><i class="zmdi zmdi-key"></i> &nbsp; Datos de la cuenta</legend>
                     <div class="container-fluid">
                         <div class="row">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                </fieldset>
+                </fieldset>-->
                 <br>
                 <fieldset>
                     <legend><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</legend>
@@ -79,7 +79,7 @@
                     </div>
                 </fieldset>
                 <br>
-                <fieldset>
+               <!-- <fieldset>
                     <legend><i class="zmdi zmdi-star"></i> &nbsp; Nivel de privilegios</legend>
                     <div class="container-fluid">
                         <div class="row">
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                </fieldset>
+                </fieldset>-->
                 <p class="text-center" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-success btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> Actualizar</button>
                 </p>

@@ -1,17 +1,17 @@
 <?php
 
         if($petiAjax){
-            require_once "../modelos/loginModels.php";
+            require_once '../modelos/loginModels.php';
         }else{
-            require_once "./modelos/loginModels.php";
+            require_once './modelos/loginModels.php';
         }  
 
             class loginController extends loginModels{
 
                 public function init_session_controller(){
 
-                    $user=mainModel::clean_cadn($_POST['UserINS']);
-                    $passuser=mainModel::clean_cadn($_POST['PassINS']);
+                    $user=mainModel::clean_cadn($_POST['userins']);
+                    $passuser=mainModel::clean_cadn($_POST['passins']);
 
                     $passuser=mainModel::encryption($passuser);
 
@@ -32,10 +32,10 @@
                         //$_SESSION['Photo_pucc']=$row['Acc_photo']; aqui se pone lo de la foto.
                         $_SESSION['token_pucc']=md5(uniqid(mt_rand(),true));
 
-                        if($row['Acc_account']=="Administrador"){
+                        if($row['Acc_type']=="Administrador"){
                             $url=SERVERURLL."home/";
 
-                        }elseif($row['Acc_account']=="Profesor"){
+                        }elseif($row['Acc_type']=="Profesor"){
                             $url=SERVERURLL."home/";
                         }else{
                             $url=SERVERURLL."student/";
@@ -49,11 +49,9 @@
                             "Texto"=>"El Usuario y/o Contraseña son Incorrectos o Su cuenta esta deshabilitada.",
                             "Tipo"=>"error"
                         ];
-                        
                         return mainModel::sweet_alerts($alertaa);
                     }
-                    
+                  
                 }
                 
             }
-    ?>

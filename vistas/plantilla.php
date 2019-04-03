@@ -9,7 +9,6 @@
 	<?php include "./vistas/modulos/script.php"; ?>
 </head>
 <body>
-
 	<?php 
 		$petiAjax=true;
 		require_once "./controladores/viewsController.php";
