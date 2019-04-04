@@ -61,11 +61,13 @@
 
         protected function add_account($datos){
 
-            $sql = self::connection()->prepare("INSERT INTO cuenta(Acc_account,Acc_email,Acc_privi,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
-                        VALUES(:acuenta,:email,:privilegio,:pass,:estado,:types,:photo)");
-            $sql-> bindParam(":acuenta",$datos['acuenta']);            
+            $sql = self::connection()->prepare("INSERT INTO cuenta(Acc_cod,Acc_account,Acc_names,Acc_lastnames,Acc_email,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
+                        VALUES(:codigo,:acuenta,:names,:lastnames,:email,:pass,:estado,:types,:photo)");
+            $sql-> bindParam(":codigo",$datos['codigo']); 
+            $sql-> bindParam(":acuenta",$datos['acuenta']); 
+            $sql-> bindParam(":names",$datos['names']); 
+            $sql-> bindParam(":lastnames",$datos['lastnames']);   
             $sql-> bindParam(":email",$datos['email']);
-            $sql-> bindParam(":privilegio",$datos['privilegio']);
             $sql-> bindParam(":pass",$datos['pass']);
             $sql-> bindParam(":estado",$datos['estado']);
             $sql-> bindParam(":types",$datos['types']);
@@ -75,8 +77,8 @@
         }
 
         protected function delete_account($account){
-            $sql =self::connection()->prepare("DELETE FROM cuenta WHERE Acc_account=:cuenta");
-            $sql-> bindParam(":cuenta",$account);
+            $sql =self::connection()->prepare("DELETE FROM cuenta WHERE Acc_cod=:codigoo");
+            $sql-> bindParam(":codigoo",$account);
             $sql->execute();
             return $sql;
 
@@ -97,12 +99,13 @@
 			return $output;
         }
         
-        protected function gen_cod_random($letras,$long,$num){
-            for($i=1;i<=$long;$i++){
+        protected function gen_cod_random($letras,$long){
+            
+            for($i = 1;i<=$long;$i++){
                 $numero=rand(0,9);
                 $letras.=$numero;
             }
-            return $letras."-".$num;
+            return $letras;
 
         }
         protected function clean_cadn($cadena){

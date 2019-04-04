@@ -1,17 +1,17 @@
 <!--Nota: Quitar Comentarios-->
 
-<!--<div class="container-fluid">
+<div class="container-fluid">
     <div class="page-header">
         <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Administración <small>NUEVO LIBRO</small></h1>
     </div>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
-</div>-->
+</div>
 
-<!-- Panel nuevo libro 
+
 <div class="container-fluid">
     <div class="panel panel-info">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVO LIBRO</h3>
+            <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVO </h3>
         </div>
         <div class="panel-body">
             <form>
@@ -197,4 +197,3 @@
         </div>
     </div>
 </div>
--->

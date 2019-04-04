@@ -32,7 +32,7 @@
                         //$_SESSION['Photo_pucc']=$row['Acc_photo']; aqui se pone lo de la foto.
                         $_SESSION['token_pucc']=md5(uniqid(mt_rand(),true));
 
-                        if($row['Acc_type']=="Administrador"){
+                        if($row['Acc_type']=="Coordinador"){
                             $url=SERVERURLL."home/";
 
                         }elseif($row['Acc_type']=="Profesor"){

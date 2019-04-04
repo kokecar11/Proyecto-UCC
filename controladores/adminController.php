@@ -9,12 +9,12 @@
         class adminController extends adminModels{
 
             public function add_coord_controller(){
+                    
                     $names=mainModel::clean_cadn($_POST['names-reg']);
                     $lastnames=mainModel::clean_cadn($_POST['lastnames-reg']);
                     $email=mainModel::clean_cadn($_POST['email-reg']);
                     $pass1=mainModel::clean_cadn($_POST['password1-reg']);
                     $pass2=mainModel::clean_cadn($_POST['password2-reg']);
-                    $privileg=mainModel::clean_cadn($_POST['optionsPrivilegio']);
                     if($pass1!=$pass2){
                         $alert=[
                             "Alerta"=>"simple",
@@ -38,22 +38,34 @@
                                 "Tipo"=>"error"
                             ];
                         }else{
+
                             $clave=mainModel::encryption($pass1);
+                            $codigo="AC0005";
                             $data_acc=[
+                                "codigo"=>"$codigo",
                                 "acuenta"=>"$email",
+                                "names"=>"$names",
+                                "lastnames"=>"$lastnames",
                                 "email"=>"$email@ucatolica.edu.co",
-                                "privilegio"=>"$privileg",
                                 "pass"=>"$clave",
-                                "estado"=>"Activo",
-                                "types"=>"Administrador",
-                                "photo"=>"Foto"
+                                "estado"=>"true",
+                                "types"=>"Profesor",
+                                "photo"=>"NULL"
                             ];
                             $save_acc=mainModel::add_account($data_acc);
                             if($save_acc->rowCount()>=1){
+
+                                $alert=[
+                                    "Alerta"=>"clean",
+                                    "Titulo"=>"Coordinador Registrado",
+                                    "Texto"=>"El Coordinador se registro con Exito!.",
+                                    "Tipo"=>"success"
+                                ];
                                 $data_adm=[
-                                    "acc_email"=>"$email",
-                                    "names"=>"$names",
-                                    "lastnames"=>"$lastnames"
+                                    "gp_gp_cod"=>"$codigo",
+                                    "gp_acc_cod"=>"$codigo",
+                                    "gp_file"=>"$codigo",
+                                    "gp_score"=>"$codigo"
                                 ];
                                 $save_adm=adminModels::add_coord_model($data_adm);
                                 if($save_adm->rowCount()>=1){
@@ -64,7 +76,7 @@
                                         "Tipo"=>"success"
                                     ];
                                 }else{
-                                    mainModel::delete_account($email);
+                                    mainModel::delete_account($codigo);
                                     $alert=[
                                         "Alerta"=>"simple",
                                         "Titulo"=>"Ocurrio un error Inesperado",

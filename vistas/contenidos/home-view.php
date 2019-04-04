@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="full-box text-center" style="padding: 30px 10px;">
-    <article class="full-box tile">
+    <!--<article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
             Coordinador
         </div>
@@ -15,7 +15,7 @@
             <p class="full-box">0</p>
             <small>Registrados</small>
         </div>
-    </article>
+    </article>-->
     <article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
             Profesor
@@ -36,7 +36,7 @@
             <i class="zmdi zmdi-face"></i>
         </div>
         <div class="full-box tile-number text-titles">
-            <p class="full-box">00</p>
+            <p class="full-box">0</p>
             <small>Registrados</small>
         </div>
     </article>

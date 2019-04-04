@@ -5,8 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="<?php echo SERVERURLL?>vistas/css/main.css">
-	<!--====== Scripts -->
-	<?php include "./vistas/modulos/script.php"; ?>
+	<link rel="stylesheet" href="<?php echo SERVERURLL?>vistas/css_calendar/fullcalendar.min.css">
+
+	<!--Calendar Scripts -->
+
 </head>
 <body>
 	<?php 
@@ -37,6 +39,6 @@
 
 	</section>
 	<?php endif; ?>
-	
+	<?php include "./vistas/modulos/script.php"; ?>
 </body>
 </html>

@@ -44,10 +44,10 @@
 						<li>
 							<a href="<?php echo SERVERURLL?>group/"><i class="zmdi zmdi-group zmdi-hc-fw"></i> Grupos</a>
 						</li>
-						<!--<li>
-							<a href="<?php echo SERVERURLL?>category/"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
-						</li>
 						<li>
+							<a href="<?php echo SERVERURLL?>events/"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i> Eventos</a>
+						</li>
+						<!--<li>
 							<a href="<?php echo SERVERURLL?>provider/"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
 						</li>
 						<li>
@@ -61,13 +61,10 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="<?php echo SERVERURLL?>admin/"><i class="zmdi zmdi-account zmdi-hc-fw"></i>Coordinadores</a>
+							<a href="<?php echo SERVERURLL?>admin/"><i class="zmdi zmdi-account zmdi-hc-fw"></i>Profesores</a>
 						</li>
 						<li>
-							<a href="<?php echo SERVERURLL?>teacher/"><i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>Profesores</a>
-						</li>
-						<li>
-							<a href="<?php echo SERVERURLL?>student/"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>Estudiantes</a>
+							<a href="<?php echo SERVERURLL?>student/"><i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>Estudiantes</a>
 						</li>
 					</ul>
 				</li>

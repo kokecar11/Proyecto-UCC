@@ -1,25 +1,25 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Usuarios <small>PROFESORES</small></h1>
+        <h1 class="text-titles"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Usuarios <small>ESTUDIANTES</small></h1>
     </div>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+    <p class="lead"></p>
 </div>
 
 <div class="container-fluid">
     <ul class="breadcrumb breadcrumb-tabs">
         <li>
-            <a href="<?php echo SERVERURLL?>teacher/" class="btn btn-info">
-                <i class="zmdi zmdi-plus"></i> &nbsp; NUEVO CLIENTE
+            <a href="<?php echo SERVERURLL?>student/" class="btn btn-info">
+                <i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ESTUDIANTE
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL?>teacherlist" class="btn btn-success">
-                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE CLIENTES
+            <a href="<?php echo SERVERURLL?>studentlist/" class="btn btn-success">
+                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ESTUDIANTES
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL?>teachersearch" class="btn btn-primary">
-                <i class="zmdi zmdi-search"></i> &nbsp; BUSCAR CLIENTE
+            <a href="<?php echo SERVERURLL?>studentsearch/" class="btn btn-primary">
+                <i class="zmdi zmdi-search"></i> &nbsp; BUSCAR ESTUDIANTES
             </a>
         </li>
     </ul>
@@ -58,7 +58,7 @@
     </form>
 </div>
 
-<!-- Panel listado de busqueda de clientes -->
+<!-- Panel listado de busqueda de clientes 
 <div class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -120,4 +120,4 @@
             </nav>
         </div>
     </div>
-</div>
+</div>-->

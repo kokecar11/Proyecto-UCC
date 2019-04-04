@@ -1,47 +1,46 @@
 		<!-- Content page -->
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>ADMINISTRADORES</small></h1>
+        <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>PROFESORES</small></h1>
     </div>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+    <p class="lead"></p>
 </div>
 
 <div class="container-fluid">
     <ul class="breadcrumb breadcrumb-tabs">
         <li>
             <a href="<?php echo SERVERURLL?>admin/" class="btn btn-info">
-                <i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ADMINISTRADOR
+                <i class="zmdi zmdi-plus"></i> &nbsp; NUEVO PROFESOR
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL?>admin-list" class="btn btn-success">
-                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES
+            <a href="<?php echo SERVERURLL?>adminlist/" class="btn btn-success">
+                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE PROFESORES
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL?>adminsearch" class="btn btn-primary">
-                <i class="zmdi zmdi-search"></i> &nbsp; BUSCAR ADMINISTRADOR
+            <a href="<?php echo SERVERURLL?>adminsearch/" class="btn btn-primary">
+                <i class="zmdi zmdi-search"></i> &nbsp; BUSCAR PROFESOR
             </a>
         </li>
     </ul>
 </div>
 
-<!-- Panel listado de administradores -->
+<!-- Panel listado de profesores -->
 <div class="container-fluid">
     <div class="panel panel-success">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES</h3>
+            <h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE PROFESORES</h3>
         </div>
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-hover text-center">
                     <thead>
                         <tr>
-                            <th class="text-center">#</th>
-                            <th class="text-center">DNI</th>
+                            <th class="text-center">CODIGO</th>
                             <th class="text-center">NOMBRES</th>
                             <th class="text-center">APELLIDOS</th>
-                            <th class="text-center">TELÉFONO</th>
+                            <th class="text-center">CORREO</th>
                             <th class="text-center">A. CUENTA</th>
                             <th class="text-center">A. DATOS</th>
                             <th class="text-center">ELIMINAR</th>
@@ -50,10 +49,10 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>7890987651</td>
                             <td>Nombres</td>
                             <td>Apellidos</td>
-                            <td>Telefono</td>
+                            <td>Correo</td>
+                          
                             <td>
                                 <a href="#!" class="btn btn-success btn-raised btn-xs">
                                     <i class="zmdi zmdi-refresh"></i>
@@ -72,7 +71,7 @@
                                 </form>
                             </td>
                         </tr>
-                        <tr>
+                        <!--<tr>
                             <td>2</td>
                             <td>7890987651</td>
                             <td>Nombres</td>
@@ -95,7 +94,7 @@
                                     </button>
                                 </form>
                             </td>
-                        </tr>
+                        </tr>-->
                     </tbody>
                 </table>
             </div>

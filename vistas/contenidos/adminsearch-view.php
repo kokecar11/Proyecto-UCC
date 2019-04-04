@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>ADMINISTRADORES</small></h1>
+        <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>PROFESORES</small></h1>
     </div>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+    <p class="lead"></p>
 </div>
 
 <div class="container-fluid">
@@ -13,13 +13,13 @@
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL;?>adminlist" class="btn btn-success">
-                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES
+            <a href="<?php echo SERVERURLL;?>adminlist/" class="btn btn-success">
+                <i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE PROFESORES
             </a>
         </li>
         <li>
-            <a href="<?php echo SERVERURLL;?>adminsearch" class="btn btn-primary">
-                <i class="zmdi zmdi-search"></i> &nbsp; BUSCAR ADMINISTRADOR
+            <a href="<?php echo SERVERURLL;?>adminsearch/" class="btn btn-primary">
+                <i class="zmdi zmdi-search"></i> &nbsp; BUSCAR PROFESOR
             </a>
         </li>
     </ul>
@@ -57,7 +57,7 @@
     </form>
 </div>
 
-<!-- Panel listado de busqueda de administradores -->
+<!-- Panel listado de busqueda de administradores 
 <div class="container-fluid">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -126,7 +126,7 @@
                                     </button>
                                 </form>
                             </td>
-                        </tr>
+                        </tr>-->
                     </tbody>
                 </table>
             </div>
