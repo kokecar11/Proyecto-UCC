@@ -1,40 +1,34 @@
 <?php
 
+
         if($petiAjax){
-            require_once "../modelos/adminModels.php";
+            require_once "../modelos/groupModels.php";
         }else{
-            require_once "./modelos/adminModels.php";
+            require_once "./modelos/groupModels.php";
         }   
 
-        class adminController extends adminModels{
+        class groupController extends adminModels{
 
-            public function add_coord_controller(){
+            public function add_group_controller(){
                     
-                    $names=mainModel::clean_cadn($_POST['names-reg']);
-                    $lastnames=mainModel::clean_cadn($_POST['lastnames-reg']);
-                    $email=mainModel::clean_cadn($_POST['email-reg']);
-                    $pass1=mainModel::clean_cadn($_POST['password1-reg']);
-                    $pass2=mainModel::clean_cadn($_POST['password2-reg']);
-                    if($pass1!=$pass2){
-                        $alert=[
-                            "Alerta"=>"simple",
-                            "Titulo"=>"Ocurrio un error Inesperado",
-                            "Texto"=>"Las contraseñas no Coinciden, intente nuevamente.",
-                            "Tipo"=>"error"
-                        ];
-                    }else{
-                        
-                        if($email!=""){
-                            $consult=mainModel::exe_query_simple("SELECT Acc_email FROM cuenta WHERE Acc_email='$email@ucatolica.edu.co'");
+                    $namegp=mainModel::clean_cadn($_POST['nombregp-reg']);
+                    $stu_n1=mainModel::clean_cadn($_POST['Estudiante1-reg']);
+                    $stu_n2=mainModel::clean_cadn($_POST['Estudiante2-reg']);
+                    $asesor=mainModel::clean_cadn($_POST['Asesor-reg']);
+                    $jurado_n1=mainModel::clean_cadn($_POST['Jurado1-reg']);
+                    $jurado_n2=mainModel::clean_cadn($_POST['Jurado2-reg']);
+                    
+                                       
+                    if($jurado_n1!=""){
+                            $consult=mainModel::exe_query_simple("SELECT Cuenta_Acc_cod FROM gp_acc WHERE Cuenta_Acc_cod='$asesor'");
                             $ec = $consult->rowCount();
-                        }else{
+                    }else{
                             $ec=0;
-                        }
-                        if($ec>=1){
+                    }if($ec>=1){
                             $alert=[
                                 "Alerta"=>"simple",
                                 "Titulo"=>"Ocurrio un error Inesperado",
-                                "Texto"=>"El Correo Institucional ya esta Registrado.",
+                                "Texto"=>"El Grupo ya esta Creado.",
                                 "Tipo"=>"error"
                             ];
                         }else{
@@ -43,7 +37,7 @@
                             $clave=mainModel::encryption($pass1);
                             
                             
-                            $data_acc=[
+                            $data_gp=[
                                 "codigo"=>"$codigo",
                                 "acuenta"=>"$email",
                                 "names"=>"$names",
@@ -54,20 +48,20 @@
                                 "types"=>"Profesor",
                                 "photo"=>""
                             ];
-                           
+                    
                             $save_acc=mainModel::add_account($data_acc);
                             if($save_acc->rowCount()>=1){
                                 $data_adm=[
                                     "gp_gp_cod"=>"",
                                     "gp_acc_cod"=>"$codigo",
                                 ];
-                            
+                                print_r ($data_adm);
                                 $save_adm=adminModels::add_coord_model($data_adm);
                                 if($save_adm->rowCount()>=1){
                                     $alert=[
                                         "Alerta"=>"clean",
-                                        "Titulo"=>"Profesor Registrado",
-                                        "Texto"=>"El Profesor se registro con Exito!.",
+                                        "Titulo"=>"Grupo Creado",
+                                        "Texto"=>"El Grupo se registro con Exito!.",
                                         "Tipo"=>"success"
                                     ];
                                 }else{
@@ -75,7 +69,7 @@
                                     $alert=[
                                         "Alerta"=>"simple",
                                         "Titulo"=>"Ocurrio un error Inesperado",
-                                        "Texto"=>"Los datos de Profesor no se pudieron Registrar.",
+                                        "Texto"=>"Los datos de Grupo no se pudieron Registrar.",
                                         "Tipo"=>"error"
                                     ];
                                 }
@@ -83,13 +77,12 @@
                                 $alert=[
                                     "Alerta"=>"simple",
                                     "Titulo"=>"Ocurrio un error Inesperado",
-                                    "Texto"=>"La cuenta no se pudo registrar, Verifique nuevamente.",
+                                    "Texto"=>"El Grupo no se pudo registrar, Verifique nuevamente.",
                                     "Tipo"=>"error"
                                 ];
                             }
                         }
                     }
-                     return mainModel::sweet_alerts($alert);
-                
+                    return mainModel::sweet_alerts($alert);         
         }
-    }   
+     }   

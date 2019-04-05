@@ -1,9 +1,9 @@
 <?php
 
         if($petiAjax){
-            require_once '../modelos/loginModels.php';
+            include '../modelos/loginModels.php';
         }else{
-            require_once './modelos/loginModels.php';
+            include './modelos/loginModels.php';
         }  
 
             class loginController extends loginModels{

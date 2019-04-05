@@ -64,7 +64,6 @@
                                     <label class="control-label">Nombre de Usuario institucional*</label>
                                     <input class="form-control" type="text" name="email-reg" required="" maxlength="50">
                                     <label>@ucatolica.edu.co</label>
-                                    <input class="form-control" type="hidden" value="@ucatolica.edu.co" name="emailins-reg">
                                 </div> 
                             </div>
                             <div class="col-xs-12 col-sm-6">

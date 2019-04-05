@@ -32,7 +32,7 @@
             <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ESTUDIANTE</h3>
         </div>
         <div class="panel-body">
-            <form action = "<?php echo SERVERURLL;?>ajax/adminAjax.php" method = "POST" data-form = "save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
+            <form action = "<?php echo SERVERURLL;?>ajax/studentAjax.php" method = "POST" data-form = "save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
             <fieldset>
                     <legend><i class="zmdi zmdi-account-box"></i> &nbsp; Información personal</legend>
                     <div class="container-fluid">
@@ -40,13 +40,13 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombres *</label>
-                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="names-reg" required="" maxlength="30">
+                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="stu-names-reg" required="" maxlength="30">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Apellidos *</label>
-                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="lastnames-reg" required="" maxlength="30">
+                                    <input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="stu-lastnames-reg" required="" maxlength="30">
                                 </div>
                             </div>
                         </div>
@@ -62,21 +62,20 @@
                             
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre de Usuario institucional*</label>
-                                    <input class="form-control" type="text" name="email-reg" required="" maxlength="50">
+                                    <input class="form-control" type="text" name="stu-email-reg" required="" maxlength="50">
                                     <label>@ucatolica.edu.co</label>
-                                    <input class="form-control" type="hidden" value="@ucatolica.edu.co" name="emailins-reg">
                                 </div> 
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Contraseña *</label>
-                                    <input class="form-control" type="password" name="password1-reg" required="" maxlength="70">
+                                    <input class="form-control" type="password" name="stu-password1-reg" required="" maxlength="70">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Repita la contraseña *</label>
-                                    <input class="form-control" type="password" name="password2-reg" required="" maxlength="70">
+                                    <input class="form-control" type="password" name="stu-password2-reg" required="" maxlength="70">
                                 </div>
                             </div>
                         </div>

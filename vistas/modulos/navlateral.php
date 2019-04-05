@@ -48,7 +48,7 @@
 							<a href="<?php echo SERVERURLL?>events/"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i> Eventos</a>
 						</li>
 						<!--<li>
-							<a href="<?php echo SERVERURLL?>provider/"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
+							<a href="http://localhost/Proyecto-UCC/Calendario/indexcalendario.php"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
 						</li>
 						<li>
 							<a href="<?php echo SERVERURLL?>proyecto/"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo libro</a>

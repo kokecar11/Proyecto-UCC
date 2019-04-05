@@ -60,8 +60,8 @@
         }
 
         protected function add_account($datos){
-
-            $sql = self::connection()->prepare("INSERT INTO cuenta(Acc_cod,Acc_account,Acc_names,Acc_lastnames,Acc_email,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
+            
+            $sql = self::connection()->prepare("INSERT INTO cuenta (Acc_cod,Acc_account,Acc_names,Acc_lastnames,Acc_email,Acc_pass,Acc_estado,Acc_type,Acc_photo) 
                         VALUES(:codigo,:acuenta,:names,:lastnames,:email,:pass,:estado,:types,:photo)");
             $sql-> bindParam(":codigo",$datos['codigo']); 
             $sql-> bindParam(":acuenta",$datos['acuenta']); 
@@ -84,6 +84,20 @@
 
         }
 
+
+        protected function add_group($grupo){
+            
+            $sql = self::connection()->prepare("INSERT INTO  grupos(Gp_cod,Gp_title,Gp_type,File_File_id) 
+                        VALUES(:gp_code,:gp_title,:gp_types,:file_ide)");
+            $sql-> bindParam(":gp_code",$datos['gp_code']); 
+            $sql-> bindParam(":gp_title",$datos['gp_title']); 
+            $sql-> bindParam(":gp_types",$datos['gp_types']); 
+            $sql-> bindParam(":file_ide",$datos['file_ide']);   
+            $sql->execute();
+            return $sql;
+        }
+
+
         public function encryption($string){
 			$output=FALSE;
 			$key=hash('sha256', SECRET_KEY);
@@ -101,8 +115,8 @@
         
         protected function gen_cod_random($letras,$long){
             
-            for($i = 1;i<=$long;$i++){
-                $numero=rand(0,9);
+            for($i = 1; $i<=$long; $i++){
+                $numero=rand(0,9);             
                 $letras.=$numero;
             }
             return $letras;
