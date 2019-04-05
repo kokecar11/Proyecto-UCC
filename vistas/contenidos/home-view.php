@@ -4,6 +4,12 @@
     </div>
 </div>
 <div class="full-box text-center" style="padding: 30px 10px;">
+
+    <?php 
+        require_once ("./controladores/adminController.php");
+        $insAdmin= new adminController();
+        $contAdmin= $insAdmin->data_admin_controller("Count",0);
+    ?>
     <!--<article class="full-box tile">
         <div class="full-box tile-title text-center text-titles text-uppercase">
             Coordinador
@@ -24,7 +30,7 @@
             <i class="zmdi zmdi-male-alt"></i>
         </div>
         <div class="full-box tile-number text-titles">
-            <p class="full-box">0</p>
+            <p class="full-box"><?php echo $contAdmin->rowCount();?></p>
             <small>Registrados</small>
         </div>
     </article>

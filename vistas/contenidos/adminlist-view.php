@@ -25,7 +25,11 @@
         </li>
     </ul>
 </div>
+<?php 
+    require_once "./controladores/adminController.php";
+    $insAdmnn= new adminController();
 
+?> 
 <!-- Panel listado de profesores -->
 <div class="container-fluid">
     <div class="panel panel-success">
@@ -33,71 +37,14 @@
             <h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE PROFESORES</h3>
         </div>
         <div class="panel-body">
-            <div class="table-responsive">
-                <table class="table table-hover text-center">
-                    <thead>
-                        <tr>
-                            <th class="text-center">CODIGO</th>
-                            <th class="text-center">NOMBRES</th>
-                            <th class="text-center">APELLIDOS</th>
-                            <th class="text-center">CORREO</th>
-                            <th class="text-center">A. CUENTA</th>
-                            <th class="text-center">A. DATOS</th>
-                            <th class="text-center">ELIMINAR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>CP412321-1</td>
-                            <td>Nombres</td>
-                            <td>Apellidos</td>
-                            <td>Correo</td>
-                          
-                            <td>
-                                <a href="#!" class="btn btn-success btn-raised btn-xs">
-                                    <i class="zmdi zmdi-refresh"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#!" class="btn btn-success btn-raised btn-xs">
-                                    <i class="zmdi zmdi-refresh"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <form>
-                                    <button type="submit" class="btn btn-danger btn-raised btn-xs">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                        <!--<tr>
-                            <td>2</td>
-                            <td>7890987651</td>
-                            <td>Nombres</td>
-                            <td>Apellidos</td>
-                            <td>Telefono</td>
-                            <td>
-                                <a href="#!" class="btn btn-success btn-raised btn-xs">
-                                    <i class="zmdi zmdi-refresh"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#!" class="btn btn-success btn-raised btn-xs">
-                                    <i class="zmdi zmdi-refresh"></i>
-                                </a>
-                            </td>
-                            <td>
-                                <form>
-                                    <button type="submit" class="btn btn-danger btn-raised btn-xs">
-                                        <i class="zmdi zmdi-delete"></i>
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>-->
-                    </tbody>
-                </table>
-            </div>
+          
+                 <?php
+                    $pag= explode("/",$_GET['views']);
+                    echo $insAdmnn->pag_admin_controller($pag[1],10,$_SESSION['User_pucc'])
+                 
+                 
+                 ?>     
+  
             <nav class="text-center">
                 <ul class="pagination pagination-sm">
                     <li class="disabled"><a href="javascript:void(0)">«</a></li>

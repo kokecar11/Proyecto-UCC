@@ -22,4 +22,18 @@
 
             }
 
+
+
+            protected function data_coord_model($tipo,$codigo_admn){
+                if($tipo=="Unico"){
+                    $query=mainModel::connection()->prepare("SELECT * FROM cuenta WHERE Acc_cod=:codigo_adm");
+                    $query->bindParam(":codigo_adm",$codigo_admn);
+
+                }elseif($tipo=="Count"){
+                    $query=mainModel::connection()->prepare("SELECT Acc_cod FROM cuenta ");
+                }
+                $query->execute();
+                return $query;
+            }
+
         }
